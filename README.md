@@ -1,13 +1,13 @@
-#/dev/patel
+# /dev/patel
 
 Linux pseudo-device to display a picture of everyone's favorite British actor
 
-##Installation
+## Installation
 
-First, install the `module-assistant` package:
+First, install the necessary packages:
 
 ```bash
-sudo apt-get install module-assistant
+sudo apt-get install make module-assistant linux-headers-`uname -r`
 ```
 
 Then, install the device:
@@ -22,7 +22,14 @@ To uninstall the device:
 sudo make uninstall
 ```
 
-##Usage
+To install using [Vagrant](https://www.vagrantup.com/):
+
+```bash
+vagrant up && vagrant ssh
+sudo make install
+```
+
+## Usage
 
 ```
 $ cat /dev/patel
@@ -39,6 +46,6 @@ $ cat /dev/patel > dev-patel.png
 
 ![Dev Patel](dev-patel.png)
 
-##Acknowledgements
+## Acknowledgements
 
 I don't know Mr. Patel, but I'm a fan of his work and his convenient first name.
